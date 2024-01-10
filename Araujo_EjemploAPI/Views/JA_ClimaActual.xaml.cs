@@ -13,8 +13,8 @@ public partial class ClimaActual : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        string latitud = lat.Text;
-        string longitud = lon.Text;
+        string latitud = JA_lat.Text;
+        string longitud = JA_lon.Text;
 
         if (Connectivity.NetworkAccess == NetworkAccess.Internet)
         {
@@ -31,13 +31,12 @@ public partial class ClimaActual : ContentPage
                     var clima = JsonConvert.DeserializeObject<Rootobject>(json);
                    
 
-                    weatherLabel.Text = clima.weather[0].main;
-                    citylabel.Text = clima.name;
-                    countrylabel.Text = clima.sys.country;                   
+                    JA_weatherLabel.Text = clima.weather[0].main;
+                    JA_citylabel.Text = clima.name;
+                    JA_countrylabel.Text = clima.sys.country;                   
 
                 }
             }
-
         }
     }
 }

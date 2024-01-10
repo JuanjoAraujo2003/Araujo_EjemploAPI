@@ -53,7 +53,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\ClimaActual.xaml">
+	  <Compile Update="Views\JA_ClimaActual.xaml.cs">
+	    <DependentUpon>JA_ClimaActual.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\JA_ClimaActual.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
