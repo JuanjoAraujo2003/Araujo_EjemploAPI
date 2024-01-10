@@ -13,27 +13,31 @@ public partial class ClimaActual : ContentPage
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-		string latitud = lat.Text;
-		string longitud = lon.Text;
+        string latitud = lat.Text;
+        string longitud = lon.Text;
 
-		if (Connectivity.NetworkAccess == NetworkAccess.Internet)
-		{
-			using (var client = new HttpClient())
-			{
-				string url = $"https://api.openweather.org/data/2.5/weather?lat=" + latitud + "&lon=" + longitud + "&appid=3d16d3aa3c180a86418fe7f36c387457";
+        if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+        {
+            using (var client = new HttpClient())
 
-				 var response = await client.GetAsync(url);
-				if (response.IsSuccessStatusCode)
-				{
-					var json = await response.Content.ReadAsStringAsync();
-					var clima = JsonConvert.DeserializeObject<Rootobject>(json);
+            {
+                string url = $"https://api.openweathermap.org/data/2.5/weather?lat=" + latitud + "&lon=" + longitud + "&appid=3d16d3aa3c180a86418fe7f36c387457";
 
-					weatherLabel.Text = clima.weather[0].main;
-					citylabel.Text = clima.name;
-				}
+                var response = await client.GetAsync(url);
+                if (response.IsSuccessStatusCode)
 
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    var clima = JsonConvert.DeserializeObject<Rootobject>(json);
+                   
+
+                    weatherLabel.Text = clima.weather[0].main;
+                    citylabel.Text = clima.name;
+                    countrylabel.Text = clima.sys.country;                   
+
+                }
             }
 
-		}
+        }
     }
 }

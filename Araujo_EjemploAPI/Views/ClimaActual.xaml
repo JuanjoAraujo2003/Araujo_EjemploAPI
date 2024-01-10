@@ -29,6 +29,9 @@
 
         <Label Text="Ciudad del clima" Grid.Row="5" Grid.Column="0" />
         <Label x:Name="citylabel" Grid.Row="5" Grid.Column="1" />
+
+        <Label Text="pais" Grid.Row="6" Grid.Column="0" />
+        <Label x:Name="countrylabel" Grid.Row="6" Grid.Column="1" />
     </Grid>
     
 </ContentPage>
