@@ -1,4 +1,4 @@
-using Araujo_EjemploAPI.Models;
+using Araujo_EjemploAPI.JA_Models;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 

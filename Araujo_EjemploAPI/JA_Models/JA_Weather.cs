@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Araujo_EjemploAPI.Models
+namespace Araujo_EjemploAPI.JA_Models
 {
 
     public class Rootobject

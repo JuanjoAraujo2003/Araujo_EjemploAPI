@@ -53,6 +53,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="JA_App.xaml.cs">
+	    <DependentUpon>JA_App.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="JA_AppShell.xaml.cs">
+	    <DependentUpon>JA_AppShell.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="JA_MainPage.xaml.cs">
+	    <DependentUpon>JA_MainPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\JA_ClimaActual.xaml.cs">
 	    <DependentUpon>JA_ClimaActual.xaml</DependentUpon>
 	  </Compile>
