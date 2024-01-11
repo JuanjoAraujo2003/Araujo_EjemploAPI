@@ -62,13 +62,13 @@
 	  <Compile Update="JA_MainPage.xaml.cs">
 	    <DependentUpon>JA_MainPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\JA_ClimaActual.xaml.cs">
+	  <Compile Update="JA_Views\JA_ClimaActual.xaml.cs">
 	    <DependentUpon>JA_ClimaActual.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\JA_ClimaActual.xaml">
+	  <MauiXaml Update="JA_Views\JA_ClimaActual.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
